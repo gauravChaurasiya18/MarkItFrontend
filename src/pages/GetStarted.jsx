@@ -27,10 +27,11 @@ const GetStarted = () => {
       setModalAction(null);
       return;
     }
+    console.log("API URL:", import.meta.env.VITE_API_URL)
 
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/users`,
+        `${import.meta.env.VITE_API_URL}/api/users`,
         {
           method: "POST",
           headers: {
